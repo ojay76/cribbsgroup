@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Cribbs Metal Fabrication</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <div class="bg-blue-600 text-white p-2 rounded-lg">
+                            <i class="fas fa-industry text-2xl"></i>
+                        </div>
+                        <span class="ml-3 text-xl font-bold text-gray-800">Cribbs Metal Fabrication</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a>
+                    <a href="index.html#services" class="text-gray-600 hover:text-blue-600">Services</a>
+                    <a href="index.html#projects" class="text-gray-600 hover:text-blue-600">Projects</a>
+                    <a href="index.html#about" class="text-gray-600 hover:text-blue-600">About</a>
+                    <a href="contact.html" class="text-blue-600 font-semibold">Contact</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pb-4">
+            <a href="index.html" class="block py-2 text-gray-600">Home</a>
+            <a href="index.html#services" class="block py-2 text-gray-600">Services</a>
+            <a href="index.html#projects" class="block py-2 text-gray-600">Projects</a>
+            <a href="index.html#about" class="block py-2 text-gray-600">About</a>
+            <a href="contact.html" class="block py-2 text-blue-600 font-semibold">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="pt-20 hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <div class="text-center">
+                <h1 class="text-5xl font-bold mb-4">Contact Us</h1>
+                <p class="text-xl text-blue-100 max-w-2xl mx-auto">Get in touch for a free quote on your metal fabrication project. We serve commercial and residential clients across Canberra.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Send Us Your Project Details</h2>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                                <input type="text" id="name" name="name" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300">
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300">
+                            </div>
+                            <div>
+                                <label for="project-type" class="block text-sm font-medium text-gray-700 mb-2">Project Type *</label>
+                                <select id="project-type" name="project-type" required 
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300">
+                                    <option value="">Select Project Type</option>
+                                    <option value="commercial">Commercial Fabrication</option>
+                                    <option value="residential">Residential Fabrication</option>
+                                    <option value="sand-blasting">Sand Blasting Service</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="requirements" class="block text-sm font-medium text-gray-700 mb-2">Project Requirements *</label>
+                            <textarea id="requirements" name="requirements" rows="5" required 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300"
+                                      placeholder="Please describe your project requirements, dimensions, materials, and any specific details..."></textarea>
+                        </div>
+
+                        <div>
+                            <label for="images" class="block text-sm font-medium text-gray-700 mb-2">Upload Reference Images (Optional)</label>
+                            <input type="file" id="images" name="images" multiple accept="image/*"
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-300">
+                            <p class="text-sm text-gray-500 mt-2">You can upload up to 4 images to help us understand your project better.</p>
+                        </div>
+
+                        <button type="submit" 
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 px-6 rounded-lg font-semibold text-lg transition duration-300">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Project Details
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h2 class="text-3xl font-bold mb-6 text-gray-800">Get In Touch</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-600 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800 mb-1">Our Location</h3>
+                                    <p class="text-gray-600">Canberra, Australian Capital Territory</p>
+                                    <p class="text-gray-500 text-sm">Serving Canberra and surrounding regions</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-600 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-phone text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800 mb-1">Phone</h3>
+                                    <p class="text-gray-600">(02) 1234 5678</p>
+                                    <p class="text-gray-500 text-sm">Mon-Fri: 7:00 AM - 5:00 PM</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-600 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800 mb-1">Email</h3>
+                                    <p class="text-gray-600">cribbsgroup@gmail.com</p>
+                                    <p class="text-gray-500 text-sm">We respond within 24 hours</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 text-blue-600 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-clock text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-gray-800 mb-1">Business Hours</h3>
+                                    <p class="text-gray-600">Monday - Friday: 7:00 AM - 5:00 PM</p>
+                                    <p class="text-gray-600">Saturday: 8:00 AM - 12:00 PM</p>
+                                    <p class="text-gray-500 text-sm">Emergency services available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Areas -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-gray-800">Service Areas</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Canberra CBD</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Barton</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Manuka</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Kingston</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span class="text-gray-600">Yarralumla</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span class="text-gray-600">All Canberra Suburbs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-600 text-white p-2 rounded-lg">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <span class="ml-3 text-xl font-bold">Cribbs Metal Fabrication</span>
+                    </div>
+                    <p class="text-gray-400">Professional metal fabrication services in Canberra for commercial and residential projects.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="index.html" class="hover:text-white">Home</a></li>
+                        <li><a href="index.html#services" class="hover:text-white">Services</a></li>
+                        <li><a href="index.html#projects" class="hover:text-white">Projects</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Commercial Fabrication</li>
+                        <li>Residential Fabrication</li>
+                        <li>Sand Blasting</li>
+                        <li>Custom Metalwork</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Canberra, ACT</li>
+                        <li><i class="fas fa-phone mr-2"></i>(02) 1234 5678</li>
+                        <li><i class="fas fa-envelope mr-2"></i>cribbsgroup@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Cribbs Metal Fabrication. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Form submission handler
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                projectType: formData.get('project-type'),
+                requirements: formData.get('requirements'),
+                images: formData.get('images')
+            };
+
+            // Here you would typically send the data to your server
+            // For now, we'll simulate a successful submission
+            alert('Thank you for your inquiry! Your project details have been sent to cribbsgroup@gmail.com. We will contact you within 24 hours.');
+            this.reset();
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
